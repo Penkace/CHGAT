@@ -8,10 +8,7 @@ Achieving gender equality is an important pillar for humankind’s sustainable f
 
 ## Data
 
-The dataset is saved in Baidu Web disk, the link is as follows
-数据集保存在百度网盘，链接如下
-* 链接：[链接：https://pan.baidu.com/s/1YF2smt90fT2HejFjLoXXCw](https://pan.baidu.com/s/1YF2smt90fT2HejFjLoXXCw)
-* 提取码: [Send Email to pengkai@shanghaitech.edu.cn]
+We provide a dataset with 58,393,173 records of 560,706 different first names and the associated gender for each name occurrence,  collected from an official source.
 
 ## Prerequisites
 
