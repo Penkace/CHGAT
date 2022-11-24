@@ -1,6 +1,6 @@
 ## CHGAT (Chinese Character Graph Attention Network) 
 
-This is the source code for paper 'For the Underrepresented in Gender Bias Research: Chinese Name Gender Prediction with Heterogeneous Graph Attention Network'
+This is the source code for paper 'For the Underrepresented in Gender Bias Research: Chinese Name Gender Prediction with Heterogeneous Graph Attention Network'.
 
 ## Abstract
 
@@ -8,7 +8,7 @@ Achieving gender equality is an important pillar for humankind’s sustainable f
 
 ## Data
 
-We provide a dataset with 58,393,173 records of 560,706 different first names and the associated gender for each name occurrence,  collected from an official source.
+We provide a dataset with 58,393,173 records of 560,706 different first names and the associated gender for each name occurrence,  collected from an official source. You can download the data from the folder `58M Names`.
 
 ## Prerequisites
 
