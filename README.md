@@ -92,7 +92,7 @@ The code has been successfully tested in the following environment. (For older d
  'node_pinyin_list': [['zhu1', 13]]}
 ```
 
-Download the dataset from the repo or prepare your own dataset in a similar format. We provide the training data, validation data and test data in the folder `data`.
+5. Download the dataset from the link [google driver](https://drive.google.com/drive/folders/1TX5dAwE6_v2AcgBx2Ngwb7kUdBFAlhC-?usp=sharing) or prepare your own dataset in a similar format. We provide the training data, validation data and test data.
 
 ### Training CHGAT
 Please run following commands for training.
