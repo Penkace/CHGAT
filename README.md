@@ -1,10 +1,10 @@
 ## CHGAT (Chinese Character Graph Attention Network) 
 
-This is the source code for paper 'For the Underrepresented in Gender Studies: Chinese Name Gender Prediction with Heterogeneous Graph Attention Network'
+This is the source code for paper 'For the Underrepresented in Gender Bias Research: Chinese Name Gender Prediction with Heterogeneous Graph Attention Network'
 
 ## Abstract
 
-Achieving gender equality is an important pillar for humankind’s sustainable future. Pioneering data-driven gender studies are based on large-scale public records such as scientific papers, patents, and company registrations, covering female researchers, inventors and entrepreneurs, and so on. Since gender information is often missing in relevant datasets, studies rely on tools to infer genders from names. However, available open-sourced Chinese gender-guessing tools are not yet suitable for scientific purposes, which may be partially responsible for female Chinese being underrepresented in mainstream gender studies and affect their universality. Specifically, these tools focus on character-level information while overlooking the fact that the combinations of Chinese characters in multi-character names, as well as the components and pronunciations of characters, convey important messages. As a first effort, we design a Chinese Heterogeneous Graph Attention (CHGAT) model to capture the heterogeneity in component relationships and incorporate the pronunciations of characters. Our model largely surpasses current tools and also outperforms the state-of-the-art algorithm. Last but not least, the most popular Chinese name-gender dataset is single-character based with far less female coverage from an unreliable source, naturally hindering relevant studies. We open-source a more balanced multi-character dataset from an official source together with our code, hoping to help future research promoting gender equality.
+Achieving gender equality is an important pillar for humankind’s sustainable future. Pioneering data-driven gender bias research is based on large-scale public records such as scientific papers, patents, and company registrations, covering female researchers, inventors and entrepreneurs, and so on. Since gender information is often missing in relevant datasets, studies rely on tools to infer genders from names. However, available open-sourced Chinese gender-guessing tools are not yet suitable for scientific purposes, which may be partially responsible for female Chinese being underrepresented in mainstream gender bias research and affect their universality. Specifically, these tools focus on character-level information while overlooking the fact that the combinations of Chinese characters in multi-character names, as well as the components and pronunciations of characters, convey important messages. As a first effort, we design a Chinese Heterogeneous Graph Attention (CHGAT) model to capture the heterogeneity in component relationships and incorporate the pronunciations of characters. Our model largely surpasses current tools and also outperforms the state-of-the-art algorithm. Last but not least, the most popular Chinese name-gender dataset is single-character based with far less female coverage from an unreliable source, naturally hindering relevant studies. We open-source a more balanced multi-character dataset from an official source together with our code, hoping to help future research promoting gender equality.
 
 ## Data
 
@@ -14,13 +14,13 @@ We provide a dataset with 58,393,173 records of 560,706 different first names an
 
 The code has been successfully tested in the following environment. (For older dgl versions, you may need to modify the code)
 
-Python 3.8.1
-PyTorch 1.11.0
-dgl 0.9.0
-Sklearn 1.1.2
-Pandas 1.4.3
-Transformers 4.21.1
-Tensorboard 2.10.0
+ - Python 3.8.1
+ - PyTorch 1.11.0
+ - dgl 0.9.0
+ - Sklearn 1.1.2
+ - Pandas 1.4.3
+ - Transformers 4.21.1
+ - Tensorboard 2.10.0
 
 ## Getting Started
 
@@ -95,9 +95,13 @@ Tensorboard 2.10.0
 Download the dataset from the repo or prepare your own dataset in a similar format. We provide the training data, validation data and test data in the folder `data`.
 
 ### Training CHGAT
-
+Please run following commands for training.
+```python
+CUDA_VISIBLE_DEVICES="0,1,2,3" torchrun --nproc_per_node=4 chgat.py --task='chgat'
+```
 
 ## Cite
+Please cite our paper if you find this code useful for your research:
 
 
 
