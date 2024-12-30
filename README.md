@@ -6,6 +6,12 @@ This is the source code for paper 'For the Underrepresented in Gender Bias Resea
 
 Achieving gender equality is an important pillar for humankind’s sustainable future. Pioneering data-driven gender bias research is based on large-scale public records such as scientific papers, patents, and company registrations, covering female researchers, inventors and entrepreneurs, and so on. Since gender information is often missing in relevant datasets, studies rely on tools to infer genders from names. However, available open-sourced Chinese gender-guessing tools are not yet suitable for scientific purposes, which may be partially responsible for female Chinese being underrepresented in mainstream gender bias research and affect their universality. Specifically, these tools focus on character-level information while overlooking the fact that the combinations of Chinese characters in multi-character names, as well as the components and pronunciations of characters, convey important messages. As a first effort, we design a Chinese Heterogeneous Graph Attention (CHGAT) model to capture the heterogeneity in component relationships and incorporate the pronunciations of characters. Our model largely surpasses current tools and also outperforms the state-of-the-art algorithm. Last but not least, the most popular Chinese name-gender dataset is single-character based with far less female coverage from an unreliable source, naturally hindering relevant studies. We open-source a more balanced multi-character dataset from an official source together with our code, hoping to help future research promoting gender equality.
 
+## Online Service
+
+We provide an online service of our mode in [http://www.chgat.tech](http://www.chgat.tech). 
+
+You can query the api to guess Chinese names with our model.
+
 ## Data
 
 We provide a dataset with 58,393,173 records of 560,706 different first names and the associated gender for each name occurrence,  collected from an official source. You can download the data from the folder `58M Names`.
@@ -92,7 +98,7 @@ The code has been successfully tested in the following environment. (For older d
  'node_pinyin_list': [['zhu1', 13]]}
 ```
 
-5. Download the dataset from the link [google driver](https://drive.google.com/drive/folders/1TX5dAwE6_v2AcgBx2Ngwb7kUdBFAlhC-?usp=sharing) or prepare your own dataset in a similar format. We provide the training data, validation data and test data.
+5. Download the dataset from the link [google driver](https://drive.google.com/drive/folders/1qE4qSYBqZTlSI_XQLNf4NpGrBzi1XrO3?usp=sharing) or prepare your own dataset in a similar format. We provide the training data, validation data and test data.
 
 ### Training CHGAT
 Please run following commands for training.
@@ -102,6 +108,17 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" torchrun --nproc_per_node=4 chgat.py --task='chga
 
 ## Cite
 Please cite our paper if you find this code useful for your research:
+```
+@inproceedings{pan2023underrepresented,
+  title={For the underrepresented in gender bias research: Chinese name gender prediction with heterogeneous graph attention network},
+  author={Pan, Zihao and Peng, Kai and Ling, Shuai and Zhang, Haipeng},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={37},
+  number={12},
+  pages={14436--14443},
+  year={2023}
+}
+```
 
 
 
